@@ -1,0 +1,95 @@
+.*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+body{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+header{
+background-color: greenyellow;
+padding: 20px 0px;
+}
+.main-head{
+animation: zooming 3s infinite;
+background-color: null;
+}
+header:hover{
+background-color: greenyellow;
+padding: 20px 0px;
+}
+section{
+display: grid;
+grid-template-columns: auto auto auto;
+}
+.border{
+border: 1px solid #222;
+margin: 5px;
+}
+/*===================================== NAV CSS =====================================*/
+nav, nav ul{
+display: flex;
+background-color: skyblue;
+}
+ul.drop-down li{
+justify-content: space-evenly;
+list-style-type: none;
+background-color: orange;
+padding: 15px;
+border-radius: 25px;
+margin:5px 15px;
+}
+nav li:hover{
+transform: scale(1.1);
+background-color: black;
+color: orange;
+}
+article{
+position: relative;
+background-color:lightgrey;
+grid-column: 1/3;
+display: grid;
+grid-template-columns: auto auto auto;
+}
+.articlebox{
+grid-template-columns: auto auto auto;
+grid-column: 1/3;
+margin: 5px;
+}
+p{
+/*height: 400px;*/
+padding: 200px 0px;
+background-color:greenyellow;
+}
+h3{
+background-color: blue;
+margin-bottom: 5px;
+}
+aside{
+padding: 150px 0px;
+}
+.inside, .outside{
+grid-column: 3;
+background-color:orange;
+margin: 5px;
+}
+footer{
+padding: 20px 0px;
+background-color:yellow;
+}
+/*=================================animation=================================*/
+@keyframes zooming{
+0%{
+background-position: center;
+transform: scale(1,1);
+}
+50%{
+background-position: center;
+transform: scale(1.2,1.2);
+}
+100%{
+background-position: center;
+transform: scale(1,1);
+}
+}

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>HTML 5 STRUCTURE</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<header class="border">
+			<h2 class="main-head">Ambab Assignment 3</h2>
+		</header>
+		<nav class="border">
+			<div class="options">
+				<ul class="drop-down closed">
+				<li><a href="#" class="nav-button">Home</a></li>
+				<li><a href="#">Why Us</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="form.html">Contact Us(FORM)</a></li>
+				<li><a href="#">Exit</a></li>
+			</ul>
+			</div>
+
+			<div class="options">
+				<ul class="drop-down closed">
+				<li><a href="#" class="nav-button">Home</a></li>
+				<li><a href="#">Why Us</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="form.html">Contact Us(FORM)</a></li>
+				<li><a href="#">Exit</a></li>
+			</ul>
+			</div>
+			<div class="options">
+				<ul class="drop-down closed">
+				<li><a href="#" class="nav-button">Home</a></li>
+				<li><a href="#">Why Us</a></li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="form.html">Contact Us(FORM)</a></li>
+				<li><a href="#">Exit</a></li>
+			</ul>
+			</div>
+		</nav>
+		<section class="border">
+			<article class="border">
+				<div class="articlebox">
+					<h3 class="border">GROUP</h3>
+					<p class="border">Paragraph</p>
+				</div>
+			<aside class="border inside">ASIDE</aside>
+		</article>
+	<aside class="border outside">ASIDE</aside>
+</section>
+<div>
+	<ul class="tab">
+		<li class="active" rel="tab1">JS calculator</li>
+		<li rel="tab2">Jquery Calculator</li>
+		<li rel="tab3">Accodions</li>
+	</ul>
+	<div class="tab-container">
+		<h3 class="h_active tab_heading" rel='tab1'>JS Calculator</h3>
+		<div class="tab_content" id="tab1">
+			<div class="calculator">
+				<form>
+					<h1> JS Calculator</h1>
+					Value 1: <input type="number" id="one" placeholder="Enter value" required><br>
+					Value 2: <input type="number" id="two" placeholder="Enter value" required><br>
+					<button type="button" value="+" onclick="myAddFunction()">+</button>
+					<button type="button" value="-" onclick="myLessFunction()">-</button>
+					<button type="button" value="*" onclick="myMultipleFunction()">*</button>
+					<button type="button" value="/" onclick="myDivideFunction()">/</button>
+					<span id="result"></span>
+				</form>
+			</div>
+		</div>
+		
+		<h3 class="tab_heading" rel='tab2'>Jquery Calculator</h3>
+		<div id="tab2" class="tab_content">
+			<div class="calculator">
+				<form>
+					<h1> Jquery Calculator</h1>
+					First Number: <input type="number" id="num1" placeholder="Enter number" required><br>
+					Second Number: <input type="number" id="num2" placeholder="Enter number" required><br>
+					<button onclick="Add()" type="button" id="btnAdd" value="+" >+</button>
+					<button onclick="Substract()" type="button" id="btnSubstract" value="-" >-</button>
+					<button onclick="Multiply()" type="button" id="btnMultiply"  value="*" >*</button>
+					<button onclick="Divide()" type="button" id="btnDivide" value="/" >/</button>
+					<span id="result2"></span>
+				</form>
+			</div>
+		</div>
+		
+		<h3 class="tab_heading" rel='tab3'>Accodion Example</h3>
+		<div id="tab3" class="tab_content">
+			<div id="accordion">
+				<h4 class="accordion-heading active"><a href="">What is Our AiM?</a></h4>
+				<p class="accordion-detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, amet temporibus
+					Deserunt magni ex, aliquam cum doloremque eum aut cupiditate vitae blanditiis voluptas, hic at? Deleniti
+				vero tempora rerum provident unde dolorem libero, quibusdam sit reiciendis fugiat.</p>
+				<h4 class="accordion-heading"><a href="">What is Our Vision?</a></h4>
+				<p class="accordion-detail">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere, amet temporibus
+					beatae veritatis doloribus ipsa eos provident non commodi reprehenderit nulla dignissimos quasi iusto!
+					Deserunt magni ex, aliquam cum doloremque eum aut cupiditate vitae blanditiis voluptas, hic at? Deleniti
+				vero tempora rerum provident unde dolorem libero, quibusdam sit reiciendis fugiat.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<footer class="border">FOOTER</footer>
+<script>
+</script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

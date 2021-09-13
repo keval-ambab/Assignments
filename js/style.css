@@ -1,0 +1,326 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+}
+body{
+text-align: center;
+font-family: 'Roboto', sans-serif;
+}
+header{
+background-color: greenyellow;
+padding: 20px 0px;
+}
+.main-head{
+/* animation: zooming 3s infinite; */
+background-color: null;
+}
+header:hover{
+background-color: greenyellow;
+padding: 20px 0px;
+}
+section{
+display: grid;
+position: relative;
+top: 35px;
+grid-template-columns: auto auto auto;
+}
+.border{
+border: 1px solid #222;
+margin: 5px;
+}
+/*===================================== NAV CSS =====================================*/
+/*nav, nav ul{
+display: flex;
+background-color: skyblue;
+}
+ul.drop-down li{
+justify-content: space-evenly;
+background-color: orange;
+list-style-type: none;
+padding: 15px;
+border-radius: 25px;
+margin:5px 15px;
+}
+
+ul.drop-down a{
+text-decoration: none;
+}
+nav li:hover{
+transform: scale(1.1);
+background-color: black;
+color: orange;
+}*/
+
+
+nav{
+    width: 99%;
+margin-top:50px;
+position: absolute;
+ top: 73px;
+ display: flex;
+
+}
+
+.options {
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+}
+ nav .drop-down{
+         position: relative;
+        list-style: none;
+        overflow: hidden;
+        height: auto;
+       background-color: lightsalmon;
+        width: 200px;
+        /*margin: 0 auto;*/
+        transition: height 0.3s ease;
+        z-index: 111;
+            }
+ nav .drop-down.closed{
+        height: 35px;
+    }
+    nav .drop-down li a{
+    display: block;
+    color:  saddlebrown;
+    text-decoration: none;
+    padding: 10px;
+    border-bottom: 1px solid black; 
+    /*z-index: 111;*/
+     }
+
+    nav .drop-down li a:hover{
+        color: saddlebrown;
+        background-color: powderblue;
+    }
+
+
+    nav .drop-down li:first-child a:after{
+        content: "\25BC";
+        float: right;
+        margin-left: -20px;
+        margin-right: 5px;
+     }
+
+
+/*===================================== article =====================================*/
+
+article{
+position: relative;
+background-color:lightgrey;
+grid-column: 1/3;
+display: grid;
+grid-template-columns: auto auto auto;
+}
+.articlebox{
+grid-template-columns: auto auto auto;
+grid-column: 1/3;
+margin: 5px;
+}
+p{
+height: 350px;
+background-color:greenyellow;
+}
+h3{
+background-color: blue;
+margin-bottom: 5px;
+}
+aside{
+/*padding: 150px 0px;*/
+}
+.inside, .outside{
+grid-column: 3;
+background-color:orange;
+margin: 5px;
+}
+
+
+/*=================================Accodion=================================*/
+#accordion{
+    margin: 30px 0px;
+}
+
+
+.accordion-heading{
+    padding: 5px;
+    border: 1px solid black;
+    letter-spacing: 1px;
+    /*position: relative;
+    top: 50px;*/
+}
+
+
+.accordion-heading a{
+    position: relative;
+    display: block;
+    background-color:greenyellow;
+    font-size: 1.3rem;
+    font-weight: 700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: none;
+    padding: 2px 0px;
+}
+
+.accordion p,.accordion-detail{
+    background-color:hotpink;
+    padding: 10px 15px;
+    height: 150px;
+}
+
+
+/*=================================accordion tabs=================================*/
+
+ul.tab{
+    position: relative;
+    top: 55px;
+    margin: 15px 20px;
+    padding: 0;
+    float: left;
+    height: 40px;
+    width: 100%;
+    list-style: none;
+    border:  1px solid #111;
+    z-index: 150;
+
+}
+
+ul.tab li{
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 20px;
+    cursor: pointer;
+    border: 1px solid blanchedalmond;
+}
+
+ul.tab li:hover{
+    background-color: rebeccapurple;
+    color: blue;
+}
+
+ul.tab li.active{
+    background-color: black;
+    color: blue;
+    display: block;
+    border: 1px solid white;
+}
+
+.tab-container{
+    border: 1px solid #eee;
+    clear: both;
+    float: left;
+    width: 100%;
+    background: #fff;
+    overflow: auto;
+}
+
+.tab_content{
+    padding: 10px 20px;
+    display: none;
+    height: auto;
+}
+
+.tab_heading{
+    display: none;
+}
+
+
+/*=================================Calculator=================================*/
+
+.calculator form{
+color: #111;
+width: 500px;
+height: auto;
+margin: 50px auto;
+font-size: 14px;
+background-image: linear-gradient(to bottom left,rgba(150, 10, 10,0.8),rgba(0, 150, 10,0.4));
+}
+
+.calculator h1{
+color: white;
+font-size: 2.5rem;
+margin: 15px 20px;
+}
+
+.calculator input,.calculator button,.calculator span{
+display: block;
+background-color: rgba(250, 250, 250, 0.8);
+color: #333;
+/*padding: 10px;*/
+margin: 10px auto;
+border-radius: 15px;
+font-weight: 900;
+}
+
+
+
+/*=================================FORM=================================*/
+.container{
+    width: 500px;
+    margin: 20px auto;
+}
+
+form{
+    padding: 5px;
+    background-color: indigo;
+    color: #eee;
+}
+
+label,input,button{
+    display: block;
+    margin-bottom: 3px;
+    width: 100%;
+}
+
+input{
+    height: 30px;
+    background-color: #eee;
+    padding: 0 5px;
+}
+
+button{
+    height: 35px;
+    font-size: large;
+    font-weight: 700;
+    cursor: pointer;
+    color: white;
+    background-color: plum;
+    margin-top: 35px;
+}
+
+form .error:focus {
+    border: 1px solid #ff0000;
+}
+
+form .error{
+    color: #ff0000;
+    
+}
+
+/*=================================animation=================================*/
+@keyframes zooming{
+0%{
+background-position: center;
+transform: scale(1,1);
+}
+50%{
+background-position: center;
+transform: scale(1.2,1.2);
+}
+100%{
+background-position: center;
+transform: scale(1,1);
+}
+}
+
+
+/*===================================== footer =====================================*/
+
+footer{
+padding: 15px 0px;
+background-color:yellow;
+clear: both;
+}
