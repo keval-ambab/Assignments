@@ -28,6 +28,8 @@
 //     });
 // });
 
+$('#message_div').hide();
+
 
 $(document).ready(function () {
 
@@ -40,6 +42,7 @@ $(document).ready(function () {
 
         $(".error").remove();
 
+
         if (fname.length < 3) {
             $('#fname').after('<span class="error">First Name is required</span>');
         }
@@ -51,23 +54,27 @@ $(document).ready(function () {
         if (email.length < 3) {
             $('#email').after('<span class="error">Email is required</span>');
         } else {
-            var regEx = /^[A-Z0-9][A-Z0-9._%+-]{0,63}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/;
-            var validEmail = regEx.test(email);
+            var emailregEx = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/; 
+            var validEmail = emailregEx.test(email);
             if (!validEmail) {
-                $('email').after('<span> Enter a valid Email</span>');
+                $('#email').after('<span class="error"> Enter a valid Email</span>');
             }
         }
 
-        if (phn.length <= 10) {
-            $('#phn').after('<span class="error">Phone is required</span>');
-        } else {
-            var regEx = /^(?:(?:\+|0{0,2})91(\s*[\-]\s*)?|[0]?)?[789]\d{9}$/;
-            var validphn = regEx.test(phn);
-            if (!validphn) {
-                $('phn').after('<span> Enter a valid Phone Number</span>');
-            }
-        }
-
-
-    });
+        if (phn.length < 10) {
+            $('#phn').after('<span class="error">Contact is required</span>');
+        } 
+ $('#submit').bind('click', function(){
+     $('#message_div').show();
 });
+          
+    });
+
+   
+        
+});
+
+// $('#reset').click(function(){
+//     // $('#registration)'[0].reset();
+//     $('#registration').trigger("reset");
+// });

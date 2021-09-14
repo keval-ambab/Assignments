@@ -3,6 +3,9 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body{
 text-align: center;
 font-family: 'Roboto', sans-serif;
@@ -54,11 +57,11 @@ color: orange;
 
 
 nav{
-    width: 99%;
+width: 99%;
 margin-top:50px;
 position: absolute;
- top: 73px;
- display: flex;
+top: 73px;
+display: flex;
 
 }
 
@@ -67,17 +70,47 @@ position: absolute;
     margin: 0 auto;
     width: 100%;
 }
+
+ul.normal-bar li{
+    position: relative;
+    top: 7px;
+display: inline;
+background-color: orange;
+list-style-type: none;
+padding: 5px;
+border-radius: 20px;
+margin:15px 15px;
+}
+
+nav .normal-bar {
+    list-style: none;
+}
+
+nav .normal-bar a{
+    text-decoration: none;
+    padding: 5px;
+border-radius: 20px;
+
+}
+  nav .normal-bar li a:hover{
+    color: saddlebrown;
+  background-color: powderblue;
+}
+
+
+
  nav .drop-down{
-         position: relative;
-        list-style: none;
-        overflow: hidden;
-        height: auto;
-       background-color: lightsalmon;
-        width: 200px;
-        /*margin: 0 auto;*/
-        transition: height 0.3s ease;
-        z-index: 111;
-            }
+    position: relative;
+    list-style: none;
+    overflow: hidden;
+    height: auto;
+    background-color: lightsalmon;
+    width: 200px;
+    /*margin: 0 auto;*/
+    transition: height 0.3s ease;
+    z-index: 111;
+    }
+
  nav .drop-down.closed{
         height: 35px;
     }
@@ -263,10 +296,38 @@ font-weight: 900;
     margin: 20px auto;
 }
 
+.back-btn{
+    float: left;
+    background-color: indigo;
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.back-btn a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.back-btn a:before{
+    content: '\02190';
+    font-size: 14px;
+}
+
+.back-btn:hover{
+    background-color: plum;
+}
+
+#message_div{
+position: relative;
+background-color:#008800;
+border:1px solid #000;
+}
+
 form{
     padding: 5px;
     background-color: indigo;
     color: #eee;
+    margin-top: 8px;
 }
 
 label,input,button{
@@ -281,7 +342,7 @@ input{
     padding: 0 5px;
 }
 
-button{
+button, #reset{
     height: 35px;
     font-size: large;
     font-weight: 700;
@@ -289,6 +350,7 @@ button{
     color: white;
     background-color: plum;
     margin-top: 35px;
+    margin: 10px auto;
 }
 
 form .error:focus {

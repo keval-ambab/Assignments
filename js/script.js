@@ -1,3 +1,10 @@
+//refresh to the top
+$(document).ready(function(){
+    $('html').animate({scrollTop:0}, 1);
+    $('body').animate({scrollTop:0}, 1);
+    
+});
+
 //navbar
 (function() {
     document.querySelector('.nav-button').addEventListener('click',function() {

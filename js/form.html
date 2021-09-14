@@ -12,8 +12,11 @@
 
 <body>
     <div class="container">
+        <div class="back-btn"><a href="structure.html">Back</a></div>
         <h2>Registration Form</h2>
-        <form action="" method="POST" name="registration" id="registration">
+        <form action="" name="registration" id="registration">
+
+
             <label for="fname">First Name</label>
             <input type="text" name="fname" id="fname" placeholder="keval">
 
@@ -24,9 +27,11 @@
             <input type="email" name="email" id="email" placeholder="keval.parikh@ambab.com">
 
             <label for="phn">Contact</label>
-            <input type="tel" name="phn" id="phn" placeholder="9876543210">
-            <button type="submit">Submit</button>
+            <input type="tel" name="phn" id="phn" maxlength="10" minlength="10" placeholder="9876543210">
+            <button type="submit" id="submit">Submit</button>
+            <input type="reset" id="reset" value="Reset"> </button>
         </form>
+        <div id="message_div">Form Received</div>
     </div>
     <script src="form-validate.js"></script>
 </body>
