@@ -9,21 +9,19 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
     if(empty($_POST["fname"])){
         $fnameErr = "Name is required";
     }else {
+        $fname = vali_data($_POST["fname"]);
         if(!preg_match("/^[a-zA-Z-' ]*$/",$fname)){
             $fnameErr = "Only letter are allowed" ;  
-        }else{
-            $fname = vali_data($_POST["fname"]);
-        }   
+        }  
     }
 
 
     if(empty($_POST["lname"])){
         $lnameErr = "Name is required";
     }else {
-        if(!preg_match("/^[a-zA-Z-' ]*$/",$fname)){
-            $fnameErr = "Only letter are allowed" ;  
-        }else{
-            $fname = vali_data($_POST["fname"]);
+        $lname = vali_data($_POST["lname"]);
+        if(!preg_match("/^[a-zA-Z-' ]*$/",$lname)){
+            $lnameErr = "Only letter are allowed" ;  
         }   
     }
 
