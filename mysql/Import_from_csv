@@ -1,0 +1,29 @@
+1. Import CSV file Process
+
+
+For import the data:
+1. First we create a dummy dataset for import in CSV
+
+2. Query to Import
+use testdb;
+LOAD DATA INFILE '/var/lib/mysql/Records.csv' into table employee FIELDS TERMINATED BY ',' IGNORE 1 ROWS;
+
+
+
+3. some error occur during the import the following solution work for me:
+
+adding secure-file-priv = "" | working this one
+but you have to copy the file into mysql directory
+in etc/mysql/mysql.conf.d/mysqld.cnf
+
+//for local but not working | error is : OS errno - permission denied
+to the last
+[client]
+local_infile=1
+and set global local_infile = true;
+for locally add data
+
+
+FOR IMPORT THE DATA FROM TABLE TO CSV
+SELECT * FROM employee INTO OUTFILE '/var/lib/mysql/r1.csv' FIELDS TERMINATED BY ',' ;
+
