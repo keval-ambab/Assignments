@@ -36,7 +36,14 @@ let createPerson = (firstName, lastName, mobileNumber) => {
       resolve(obj.fullName(firstName, lastName));
     }
   });
+  
 }
+
+// myPromise = new Promise((resolve,reject) => {
+//   resolve("hello resolve")
+// })
+
+// myPromise.then((res)=> console.log(res));
 
 // Create a `main` function.
 let main = () => {
