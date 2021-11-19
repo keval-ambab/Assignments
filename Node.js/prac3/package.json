@@ -1,0 +1,26 @@
+{
+  "name": "prac2",
+  "version": "1.0.0",
+  "description": "REST API with the node.js, express.js and sequelize-mysql",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "api",
+    "node",
+    "express",
+    "orm"
+  ],
+  "author": "keval parikh",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.3.2",
+    "sequelize": "^6.7.0"
+  }
+}
